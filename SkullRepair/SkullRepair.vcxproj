@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EdgePicking.h" />
+    <ClInclude Include="iGeometry.h" />
+    <ClInclude Include="linequ.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="vtkCommon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EdgePicking.cpp" />
+    <ClCompile Include="iGeometry.cpp" />
+    <ClCompile Include="linequ.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C3DD7E8-0636-439F-8993-5BDF67F02932}</ProjectGuid>
+    <RootNamespace>SkullRepair</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>C:\Program Files (x86)\VTK\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files (x86)\VTK\include\vtk-6.1;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>vtkalglib-6.1.lib;vtkChartsCore-6.1.lib;vtkChartsCorePython27D-6.1.lib;vtkCommonColor-6.1.lib;vtkCommonColorPython27D-6.1.lib;vtkCommonComputationalGeometry-6.1.lib;vtkCommonComputationalGeometryPython27D-6.1.lib;vtkCommonCore-6.1.lib;vtkCommonCorePython27D-6.1.lib;vtkCommonDataModel-6.1.lib;vtkCommonDataModelPython27D-6.1.lib;vtkCommonExecutionModel-6.1.lib;vtkCommonExecutionModelPython27D-6.1.lib;vtkCommonMath-6.1.lib;vtkCommonMathPython27D-6.1.lib;vtkCommonMisc-6.1.lib;vtkCommonMiscPython27D-6.1.lib;vtkCommonSystem-6.1.lib;vtkCommonSystemPython27D-6.1.lib;vtkCommonTransforms-6.1.lib;vtkCommonTransformsPython27D-6.1.lib;vtkDICOMParser-6.1.lib;vtkDomainsChemistry-6.1.lib;vtkDomainsChemistryPython27D-6.1.lib;vtkexoIIc-6.1.lib;vtkexpat-6.1.lib;vtkFiltersAMR-6.1.lib;vtkFiltersAMRPython27D-6.1.lib;vtkFiltersCore-6.1.lib;vtkFiltersCorePython27D-6.1.lib;vtkFiltersExtraction-6.1.lib;vtkFiltersExtractionPython27D-6.1.lib;vtkFiltersFlowPaths-6.1.lib;vtkFiltersFlowPathsPython27D-6.1.lib;vtkFiltersGeneral-6.1.lib;vtkFiltersGeneralPython27D-6.1.lib;vtkFiltersGeneric-6.1.lib;vtkFiltersGenericPython27D-6.1.lib;vtkFiltersGeometry-6.1.lib;vtkFiltersGeometryPython27D-6.1.lib;vtkFiltersHybrid-6.1.lib;vtkFiltersHybridPython27D-6.1.lib;vtkFiltersHyperTree-6.1.lib;vtkFiltersHyperTreePython27D-6.1.lib;vtkFiltersImaging-6.1.lib;vtkFiltersImagingPython27D-6.1.lib;vtkFiltersModeling-6.1.lib;vtkFiltersModelingPython27D-6.1.lib;vtkFiltersParallel-6.1.lib;vtkFiltersParallelImaging-6.1.lib;vtkFiltersParallelImagingPython27D-6.1.lib;vtkFiltersParallelPython27D-6.1.lib;vtkFiltersProgrammable-6.1.lib;vtkFiltersProgrammablePython27D-6.1.lib;vtkFiltersSelection-6.1.lib;vtkFiltersSelectionPython27D-6.1.lib;vtkFiltersSMP-6.1.lib;vtkFiltersSMPPython27D-6.1.lib;vtkFiltersSources-6.1.lib;vtkFiltersSourcesPython27D-6.1.lib;vtkFiltersStatistics-6.1.lib;vtkFiltersStatisticsPython27D-6.1.lib;vtkFiltersTexture-6.1.lib;vtkFiltersTexturePython27D-6.1.lib;vtkFiltersVerdict-6.1.lib;vtkFiltersVerdictPython27D-6.1.lib;vtkfreetype-6.1.lib;vtkftgl-6.1.lib;vtkGeovisCore-6.1.lib;vtkGeovisCorePython27D-6.1.lib;vtkgl2ps-6.1.lib;vtkGUISupportQt-6.1.lib;vtkGUISupportQtOpenGL-6.1.lib;vtkGUISupportQtSQL-6.1.lib;vtkGUISupportQtWebkit-6.1.lib;vtkhdf5-6.1.lib;vtkhdf5_hl-6.1.lib;vtkImagingColor-6.1.lib;vtkImagingColorPython27D-6.1.lib;vtkImagingCore-6.1.lib;vtkImagingCorePython27D-6.1.lib;vtkImagingFourier-6.1.lib;vtkImagingFourierPython27D-6.1.lib;vtkImagingGeneral-6.1.lib;vtkImagingGeneralPython27D-6.1.lib;vtkImagingHybrid-6.1.lib;vtkImagingHybridPython27D-6.1.lib;vtkImagingMath-6.1.lib;vtkImagingMathPython27D-6.1.lib;vtkImagingMorphological-6.1.lib;vtkImagingMorphologicalPython27D-6.1.lib;vtkImagingSources-6.1.lib;vtkImagingSourcesPython27D-6.1.lib;vtkImagingStatistics-6.1.lib;vtkImagingStatisticsPython27D-6.1.lib;vtkImagingStencil-6.1.lib;vtkImagingStencilPython27D-6.1.lib;vtkInfovisCore-6.1.lib;vtkInfovisCorePython27D-6.1.lib;vtkInfovisLayout-6.1.lib;vtkInfovisLayoutPython27D-6.1.lib;vtkInteractionImage-6.1.lib;vtkInteractionImagePython27D-6.1.lib;vtkInteractionStyle-6.1.lib;vtkInteractionStylePython27D-6.1.lib;vtkInteractionWidgets-6.1.lib;vtkInteractionWidgetsPython27D-6.1.lib;vtkIOAMR-6.1.lib;vtkIOAMRPython27D-6.1.lib;vtkIOCore-6.1.lib;vtkIOCorePython27D-6.1.lib;vtkIOEnSight-6.1.lib;vtkIOEnSightPython27D-6.1.lib;vtkIOExodus-6.1.lib;vtkIOExodusPython27D-6.1.lib;vtkIOExport-6.1.lib;vtkIOExportPython27D-6.1.lib;vtkIOGeometry-6.1.lib;vtkIOGeometryPython27D-6.1.lib;vtkIOImage-6.1.lib;vtkIOImagePython27D-6.1.lib;vtkIOImport-6.1.lib;vtkIOImportPython27D-6.1.lib;vtkIOInfovis-6.1.lib;vtkIOInfovisPython27D-6.1.lib;vtkIOLegacy-6.1.lib;vtkIOLegacyPython27D-6.1.lib;vtkIOLSDyna-6.1.lib;vtkIOLSDynaPython27D-6.1.lib;vtkIOMINC-6.1.lib;vtkIOMINCPython27D-6.1.lib;vtkIOMovie-6.1.lib;vtkIOMoviePython27D-6.1.lib;vtkIONetCDF-6.1.lib;vtkIONetCDFPython27D-6.1.lib;vtkIOParallel-6.1.lib;vtkIOParallelPython27D-6.1.lib;vtkIOPLY-6.1.lib;vtkIOPLYPython27D-6.1.lib;vtkIOSQL-6.1.lib;vtkIOSQLPython27D-6.1.lib;vtkIOVideo-6.1.lib;vtkIOVideoPython27D-6.1.lib;vtkIOXML-6.1.lib;vtkIOXMLParser-6.1.lib;vtkIOXMLParserPython27D-6.1.lib;vtkIOXMLPython27D-6.1.lib;vtkjpeg-6.1.lib;vtkjsoncpp-6.1.lib;vtklibxml2-6.1.lib;vtkmetaio-6.1.lib;vtkNetCDF-6.1.lib;vtkNetCDF_cxx-6.1.lib;vtkoggtheora-6.1.lib;vtkParallelCore-6.1.lib;vtkParallelCorePython27D-6.1.lib;vtkpng-6.1.lib;vtkproj4-6.1.lib;vtkRenderingAnnotation-6.1.lib;vtkRenderingAnnotationPython27D-6.1.lib;vtkRenderingContext2D-6.1.lib;vtkRenderingContext2DPython27D-6.1.lib;vtkRenderingCore-6.1.lib;vtkRenderingCorePython27D-6.1.lib;vtkRenderingFreeType-6.1.lib;vtkRenderingFreeTypeOpenGL-6.1.lib;vtkRenderingFreeTypeOpenGLPython27D-6.1.lib;vtkRenderingFreeTypePython27D-6.1.lib;vtkRenderingGL2PS-6.1.lib;vtkRenderingGL2PSPython27D-6.1.lib;vtkRenderingImage-6.1.lib;vtkRenderingImagePython27D-6.1.lib;vtkRenderingLabel-6.1.lib;vtkRenderingLabelPython27D-6.1.lib;vtkRenderingLIC-6.1.lib;vtkRenderingLICPython27D-6.1.lib;vtkRenderingLOD-6.1.lib;vtkRenderingLODPython27D-6.1.lib;vtkRenderingOpenGL-6.1.lib;vtkRenderingOpenGLPython27D-6.1.lib;vtkRenderingQt-6.1.lib;vtkRenderingQtPython27D-6.1.lib;vtkRenderingVolume-6.1.lib;vtkRenderingVolumeAMR-6.1.lib;vtkRenderingVolumeAMRPython27D-6.1.lib;vtkRenderingVolumeOpenGL-6.1.lib;vtkRenderingVolumeOpenGLPython27D-6.1.lib;vtkRenderingVolumePython27D-6.1.lib;vtksqlite-6.1.lib;vtksys-6.1.lib;vtkTestingRendering-6.1.lib;vtkTestingRenderingPython27D-6.1.lib;vtktiff-6.1.lib;vtkverdict-6.1.lib;vtkViewsContext2D-6.1.lib;vtkViewsContext2DPython27D-6.1.lib;vtkViewsCore-6.1.lib;vtkViewsCorePython27D-6.1.lib;vtkViewsGeovis-6.1.lib;vtkViewsGeovisPython27D-6.1.lib;vtkViewsInfovis-6.1.lib;vtkViewsInfovisPython27D-6.1.lib;vtkViewsQt-6.1.lib;vtkWrappingPython27Core-6.1.lib;vtkWrappingTools-6.1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
