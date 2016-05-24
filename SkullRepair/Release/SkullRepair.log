@@ -1,0 +1,15 @@
+﻿  EdgePicking.cpp
+EdgePicking.cpp(33): warning C4018: '<' : signed/unsigned mismatch
+EdgePicking.cpp(160): warning C4101: 'cellId' : unreferenced local variable
+  iGeometry.cpp
+  linequ.cpp
+  main.cpp
+main.cpp(145): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(184): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(361): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(363): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(450): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(664): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(670): warning C4018: '<' : signed/unsigned mismatch
+main.cpp(685): warning C4018: '<' : signed/unsigned mismatch
+LINK : fatal error LNK1181: cannot open input file 'vtkChartsCorePython27D-6.1.lib'
